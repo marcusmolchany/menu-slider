@@ -3,11 +3,11 @@
 #main-content {
 	position: absolute;
 	top: 0;
-	-webkit-transition: all 0.7s ease-out;
-		 -moz-transition: all 0.7s ease-out;
-			-ms-transition: all 0.7s ease-out;
-			 -o-transition: all 0.7s ease-out;
-					transition: all 0.7s ease-out;	
+	-webkit-transition: all 0.3s ease-out;
+		 -moz-transition: all 0.3s ease-out;
+			-ms-transition: all 0.3s ease-out;
+			 -o-transition: all 0.3s ease-out;
+					transition: all 0.3s ease-out;	
 }
 
 #main-content.closed {
@@ -15,22 +15,22 @@
 }
 
 #main-content.open {
-	left: 100px
+	left: 50px
 }
 
 #menu-wrapper {
 	position: absolute;
 	top: 0;
 	background: gray;
-	-webkit-transition: all 0.7s ease-out;
-		 -moz-transition: all 0.7s ease-out;
-			-ms-transition: all 0.7s ease-out;
-			 -o-transition: all 0.7s ease-out;
-					transition: all 0.7s ease-out;	
+	-webkit-transition: all 0.3s ease-out;
+		 -moz-transition: all 0.3s ease-out;
+			-ms-transition: all 0.3s ease-out;
+			 -o-transition: all 0.3s ease-out;
+					transition: all 0.3s ease-out;	
 }
 
 #menu-wrapper.closed {
-	left: -100px;
+	left: -50px;
 }
 
 #menu-wrapper.open {
