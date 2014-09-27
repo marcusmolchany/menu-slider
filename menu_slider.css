@@ -1,0 +1,38 @@
+/*http://stackoverflow.com/questions/13968486/move-div-with-css-transition*/
+
+#main-content {
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.7s ease-out;
+		 -moz-transition: all 0.7s ease-out;
+			-ms-transition: all 0.7s ease-out;
+			 -o-transition: all 0.7s ease-out;
+					transition: all 0.7s ease-out;	
+}
+
+#main-content.closed {
+	left: 0;
+}
+
+#main-content.open {
+	left: 100px
+}
+
+#menu-wrapper {
+	position: absolute;
+	top: 0;
+	background: gray;
+	-webkit-transition: all 0.7s ease-out;
+		 -moz-transition: all 0.7s ease-out;
+			-ms-transition: all 0.7s ease-out;
+			 -o-transition: all 0.7s ease-out;
+					transition: all 0.7s ease-out;	
+}
+
+#menu-wrapper.closed {
+	left: -100px;
+}
+
+#menu-wrapper.open {
+	left: 0px;
+}
