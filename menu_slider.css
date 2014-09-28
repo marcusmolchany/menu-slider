@@ -3,6 +3,11 @@
 #main-content {
   position: absolute;
   top: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: white;
+
   -webkit-transition: all 0.3s ease-out;
      -moz-transition: all 0.3s ease-out;
       -ms-transition: all 0.3s ease-out;
@@ -15,28 +20,50 @@
 }
 
 #main-content.open {
-  left: 50px
+  left: 150px
 }
 
 #menu-wrapper {
   position: absolute;
   top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
   background: gray;
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
 }
 
 #menu-wrapper.closed {
-  left: -50px;
 }
 
 #menu-wrapper.open {
-  left: 0px;
+  display: block;
 }
 
 ul#menu {
   list-style-type: none;
+  padding: 0 30px 0 0;
+}
+
+ul#menu li {
+  border-bottom: 1px solid darkgray;
+
+  padding: 0.5% 0 0.5% 1%;
+}
+
+ul#menu > li > a {
+  display: block;
+  text-decoration: none;
+}
+
+ul#menu > li > a:link {
+  color: white;
+}
+
+ul#menu > li > a:hover {
+  color: white;
+}
+
+ul#menu > li > a:visited {
+  color: white;
 }
