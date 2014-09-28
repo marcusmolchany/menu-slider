@@ -6,7 +6,12 @@
   height: 100%;
   width: 100%;
 
+  padding: 10px 10px 0 10px;
+
   background-color: white;
+
+  /*http://stackoverflow.com/questions/10463208/box-shadow-on-the-left-side-of-the-element-only*/
+  box-shadow: -6px 0px 10px 1px #646464;
 
   -webkit-transition: all 0.3s ease-out;
      -moz-transition: all 0.3s ease-out;
