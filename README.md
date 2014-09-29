@@ -4,7 +4,7 @@ A menu slider that moves the main content to the side and reveals a menu behind 
 
 ![alt tag](https://i.imgflip.com/ck1pq.gif)
 
-[Demo at jsfiddle.net](http://jsfiddle.net/csp8rhra/)
+[Demo at jsfiddle.net](http://jsfiddle.net/marcusmolchany/hjb5cwh1/1/)
 
 ###Sources used during development
 * CSS  
