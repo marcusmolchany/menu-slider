@@ -8,5 +8,11 @@ function slideMenu() {
   mainContent.className = mainContent.classList.contains('open') ? 'closed':'open';
 }
 
-var menuButton = document.getElementById('menu-slider-button');
-menuButton.addEventListener('click', slideMenu, false);
+function animateHamburger() {
+  var hamburgerButton = this;
+  hamburgerButton.className = hamburgerButton.classList.contains('open') ? 'closed':'open';
+}
+
+var hamburgerButton = document.getElementById('menu-slider-hamburger');
+hamburgerButton.addEventListener('click', slideMenu, false);
+hamburgerButton.addEventListener('click', animateHamburger, false);
