@@ -59,15 +59,27 @@ body {
 }
 
 #menu-slider-hamburger.open > #top-bar {
-  transform: translateY(6px) rotate(45deg);
+  -webkit-transform: translateY(6px) rotate(45deg);
+     -moz-transform: translateY(6px) rotate(45deg);
+      -ms-transform: translateY(6px) rotate(45deg);
+       -o-transform: translateY(6px) rotate(45deg);
+          transform: translateY(6px) rotate(45deg);
 }
 
 #menu-slider-hamburger.open > #middle-bar {
-  transform: rotateY(90deg);
+  -webkit-transform: rotateY(90deg);
+     -moz-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+       -o-transform: rotateY(90deg);
+          transform: rotateY(90deg);
 }
 
 #menu-slider-hamburger.open > #bottom-bar {
-  transform: translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+     -moz-transform: translateY(-6px) rotate(-45deg);
+      -ms-transform: translateY(-6px) rotate(-45deg);
+       -o-transform: translateY(-6px) rotate(-45deg);
+          transform: translateY(-6px) rotate(-45deg);
 }
 
 #menu-wrapper {
