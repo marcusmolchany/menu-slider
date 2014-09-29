@@ -13,11 +13,11 @@
   /*http://stackoverflow.com/questions/10463208/box-shadow-on-the-left-side-of-the-element-only*/
   box-shadow: -6px 0px 10px 1px #646464;
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 #main-content.closed {
@@ -26,6 +26,11 @@
 
 #main-content.open {
   left: 150px
+}
+
+#menu-slider-hamburger {
+  height: 15px;
+  width: 20px;
 }
 
 #menu-slider-hamburger:hover {
@@ -39,11 +44,11 @@
   background-color: gray;
   opacity: 0.5;
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 #menu-slider-hamburger.open > #top-bar {
