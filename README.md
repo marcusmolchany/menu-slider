@@ -4,6 +4,8 @@ A menu slider that moves the main content to the side and reveals a menu behind 
 
 ![alt tag](https://i.imgflip.com/ck1pq.gif)
 
+![jsfiddle](http://jsfiddle.net/csp8rhra/)
+
 ###Sources used during development
 * CSS  
   * http://stackoverflow.com/questions/13968486/move-div-with-css-transition  
