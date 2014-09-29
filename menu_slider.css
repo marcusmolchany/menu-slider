@@ -1,10 +1,17 @@
 /*http://stackoverflow.com/questions/13968486/move-div-with-css-transition*/
 
+body {
+  /*http://css-tricks.com/snippets/css/better-helvetica/*/
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+  background-color: gray;
+}
+
 #main-content {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: auto;
 
   padding: 10px 10px 0 10px;
 
@@ -68,7 +75,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: auto;
 
   background: gray;
 }
@@ -88,7 +95,11 @@ ul#menu {
 ul#menu li {
   border-bottom: 1px solid darkgray;
 
-  padding: 0.5% 0 0.5% 1%;
+  padding: 10px 60px 10px 10px;
+}
+
+ul#menu li.selected {
+  background-color: rgb(171, 171, 171);
 }
 
 ul#menu > li > a {
