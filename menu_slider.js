@@ -13,6 +13,27 @@ function animateHamburger() {
   hamburgerButton.className = hamburgerButton.classList.contains('open') ? 'closed':'open';
 }
 
+function selectMenuItem() {
+  var selectedMenuItem = this;
+
+  selectedMenuItem.className = 'selected';
+
+  var menu = document.getElementById('menu');
+  var menuItems = menu.children;
+  for (var i = 0; i < menuItems.length; i++) {
+    if (menuItems[i] != this) {
+      menuItems[i].className = '';
+    }
+  }
+}
+
 var hamburgerButton = document.getElementById('menu-slider-hamburger');
 hamburgerButton.addEventListener('click', slideMenu, false);
 hamburgerButton.addEventListener('click', animateHamburger, false);
+
+var menu = document.getElementById('menu');
+var menuItems = menu.children;
+
+for (var i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener('click', selectMenuItem, false);
+}

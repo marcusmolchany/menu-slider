@@ -94,8 +94,6 @@ ul#menu {
 
 ul#menu li {
   border-bottom: 1px solid darkgray;
-
-  padding: 10px 60px 10px 10px;
 }
 
 ul#menu li.selected {
@@ -104,6 +102,9 @@ ul#menu li.selected {
 
 ul#menu > li > a {
   display: block;
+
+  padding: 10px 60px 10px 10px;
+
   text-decoration: none;
 }
 
