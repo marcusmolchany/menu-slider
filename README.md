@@ -2,7 +2,7 @@
 
 A menu slider that moves the main content to the side and reveals a menu behind it.
 
-![alt tag](https://i.imgflip.com/ck1pq.gif)
+![alt tag](https://raw.github.com/marcusmolchany/menu-slider/master/menu-slider-demo.gif)
 
 [Demo at jsfiddle.net](http://jsfiddle.net/marcusmolchany/hjb5cwh1/1/)
 
