@@ -6,7 +6,10 @@ A menu slider that moves the main content to the side and reveals a menu behind 
 
 [Demo at jsfiddle.net](http://jsfiddle.net/marcusmolchany/hjb5cwh1/1/)
 
+
 ##Hamburger Button How-To
+The Hamburger Button consists of a wrapper div with three divs within it. The three inner divs represent the horizontal bars. The animation is done using CSS3 transform: translateY, rotate and rotateY and transition for timing. The click event is done in javascript and adds the 'open' or 'closed' class to the outer 'menu-slider-hamburger' div which initiates the animation.
+
 ###HTML
 ```
 <div id="menu-slider-hamburger">
@@ -16,6 +19,7 @@ A menu slider that moves the main content to the side and reveals a menu behind 
 </div>
 ```
 ###CSS
+In the animation the top bar rotates down 45 degrees and translates down 6 pixels, the middle bar rotates on the y axis (causing it to disappear) and the bottom bar rotates up 45 degrees and translates up 6 pixels.
 ```
 #menu-slider-hamburger {
   height: 15px;
@@ -76,6 +80,7 @@ hamburgerButton.addEventListener('click', animateHamburger, false);
 ```
 
 ##Menu Slider How-To
+The Menu Slider consists of two main divs, one that wraps the menu and one that wraps the content. Within the menu wrapper is a `<ul>` 'menu' with several `<li>` menu items. This list is styled in the CSS to look like tabs. Both divs are set to 'position: absolute' in the CSS so that the main-content can sit over top of the menu and slide away when the menu button is clicked (You will need to add some sort of menu button to the HTML and give it an event listener in the javascript to call slideMenu()).
 ###HTML
 ```
 <div id="menu-wrapper" class="closed">
