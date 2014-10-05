@@ -13,15 +13,6 @@ function animateHamburger() {
   hamburgerButton.className = hamburgerButton.classList.contains('open') ? 'closed' : 'open';
 }
 
-function selectMenuItem() {
-  var selectedMenuItem = this;
-  var menuItems = document.getElementById('menu').children;
-
-  [].forEach.call(menuItems, function(value, index) {
-    menuItems[index].className = menuItems[index] == selectedMenuItem ? 'selected' : '';
-  });
-}
-
 function setupEventListeners() {
   var hamburgerButton = document.getElementById('menu-slider-hamburger');
   hamburgerButton.addEventListener('click', slideMenu, false);
@@ -29,9 +20,12 @@ function setupEventListeners() {
 
   var menuItems = document.getElementById('menu').children;
 
-  for (var i = 0; i < menuItems.length; i++) {
-    menuItems[i].addEventListener('click', selectMenuItem, false);
-  }
+  [].forEach.call(menuItems, function(menuItem, index) {
+    menuItem.addEventListener('click', function() {
+      document.getElementById('menu').getElementsByClassName('selected')[0].className = '';
+      this.className = 'selected';
+    }, false);
+  });
 }
 
 setupEventListeners();
