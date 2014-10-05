@@ -1,37 +1,66 @@
-/*http://stackoverflow.com/questions/13968486/move-div-with-css-transition*/
+/***********************************/
+/*************** MAIN **************/
+/***********************************/
 
 body {
-  /*http://css-tricks.com/snippets/css/better-helvetica/*/
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin: 0;
+}
 
-  background-color: gray;
+#main-content, #menu-wrapper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+
+  -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
 }
 
 #main-content {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: auto;
-  padding: 10px 10px 0;
-  background-color: white;
-
-  /*http://stackoverflow.com/questions/10463208/box-shadow-on-the-left-side-of-the-element-only*/
-  box-shadow: -6px 0px 10px 1px #646464;
-
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-#main-content.closed {
-  left: 0;
+  width: 95%;
+  padding: 10px;
 }
 
 #main-content.open {
-  left: 150px;
+  width: 80%;
 }
+
+#menu-wrapper {
+  width: 0%;
+  background: gray;
+}
+
+#menu-wrapper.open {
+  width: 10%;
+}
+
+ul#menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#menu li {
+  border-bottom: 1px solid darkgray;
+}
+
+ul#menu li.selected {
+  background-color: rgb(171, 171, 171);
+}
+
+ul#menu > li > a {
+  display: block;
+  padding: 10px 60px 10px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/***********************************/
+/********** HAMBURGER **************/
+/***********************************/
 
 #menu-slider-hamburger {
   height: 15px;
@@ -78,36 +107,4 @@ body {
       -ms-transform: translateY(-6px) rotate(-45deg);
        -o-transform: translateY(-6px) rotate(-45deg);
           transform: translateY(-6px) rotate(-45deg);
-}
-
-#menu-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: gray;
-}
-
-#menu-wrapper.open {
-  display: block;
-}
-
-ul#menu {
-  list-style-type: none;
-  padding: 0 30px 0 0;
-}
-
-ul#menu li {
-  border-bottom: 1px solid darkgray;
-}
-
-ul#menu li.selected {
-  background-color: rgb(171, 171, 171);
-}
-
-ul#menu > li > a {
-  display: block;
-  padding: 10px 60px 10px 10px;
-  text-decoration: none;
-  color: white;
 }
