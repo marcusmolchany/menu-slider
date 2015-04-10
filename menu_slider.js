@@ -4,36 +4,28 @@ function slideMenu() {
 
   //http://stackoverflow.com/questions/2739667/add-another-class-to-a-div-with-javascript
   //http://stackoverflow.com/questions/5898656/test-if-an-element-contains-a-class
-  menuWrapper.className = menuWrapper.classList.contains('open') ? 'closed':'open';
-  mainContent.className = mainContent.classList.contains('open') ? 'closed':'open';
+  menuWrapper.className = menuWrapper.classList.contains('open') ? 'closed' : 'open';
+  mainContent.className = mainContent.classList.contains('open') ? 'closed' : 'open';
 }
 
 function animateHamburger() {
   var hamburgerButton = this;
-  hamburgerButton.className = hamburgerButton.classList.contains('open') ? 'closed':'open';
+  hamburgerButton.className = hamburgerButton.classList.contains('open') ? 'closed' : 'open';
 }
 
-function selectMenuItem() {
-  var selectedMenuItem = this;
+function setupEventListeners() {
+  var hamburgerButton = document.getElementById('menu-slider-hamburger');
+  hamburgerButton.addEventListener('click', slideMenu, false);
+  hamburgerButton.addEventListener('click', animateHamburger, false);
 
-  selectedMenuItem.className = 'selected';
+  var menuItems = document.getElementById('menu').children;
 
-  var menu = document.getElementById('menu');
-  var menuItems = menu.children;
-  for (var i = 0; i < menuItems.length; i++) {
-    if (menuItems[i] != this) {
-      menuItems[i].className = '';
-    }
-  }
+  [].forEach.call(menuItems, function(menuItem, index) {
+    menuItem.addEventListener('click', function() {
+      document.getElementById('menu').getElementsByClassName('selected')[0].className = '';
+      this.className = 'selected';
+    }, false);
+  });
 }
 
-var hamburgerButton = document.getElementById('menu-slider-hamburger');
-hamburgerButton.addEventListener('click', slideMenu, false);
-hamburgerButton.addEventListener('click', animateHamburger, false);
-
-var menu = document.getElementById('menu');
-var menuItems = menu.children;
-
-for (var i = 0; i < menuItems.length; i++) {
-  menuItems[i].addEventListener('click', selectMenuItem, false);
-}
+setupEventListeners();
