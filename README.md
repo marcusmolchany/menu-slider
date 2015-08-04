@@ -4,7 +4,7 @@ A menu slider that moves the main content to the side and reveals a menu behind 
 
 ![alt tag](https://raw.github.com/marcusmolchany/menu-slider/master/menu-slider-demo.gif)
 
-[Demo at jsfiddle.net](http://jsfiddle.net/marcusmolchany/hjb5cwh1/1/)
+[Demo at jsfiddle.net](http://jsfiddle.net/marcusmolchany/hjb5cwh1/3/)
 
 
 ##Hamburger Button How-To
@@ -100,57 +100,33 @@ The Menu Slider consists of two main divs, including one that wraps the menu and
 ###CSS
 ```css
 #menu-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: auto;
-
   background: gray;
 }
 
-#menu-wrapper.closed {
-}
-
-#menu-wrapper.open {
-  display: block;
-}
-
-ul#menu {
+#menu {
   list-style-type: none;
   padding: 0 30px 0 0;
 }
 
-ul#menu li {
+#menu li {
   border-bottom: 1px solid darkgray;
 }
 
-ul#menu li.selected {
+#menu li.selected {
   background-color: rgb(171, 171, 171);
 }
 
-ul#menu > li > a {
+#menu > li > a {
   display: block;
 
   padding: 10px 60px 10px 10px;
 
   text-decoration: none;
-}
-
-ul#menu > li > a:link {
-  color: white;
-}
-
-ul#menu > li > a:hover {
-  color: white;
-}
-
-ul#menu > li > a:visited {
   color: white;
 }
 
 #main-content {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100%;
   width: auto;
@@ -159,26 +135,38 @@ ul#menu > li > a:visited {
 
   background-color: white;
 
+  /*http://stackoverflow.com/questions/10463208/box-shadow-on-the-left-side-of-the-element-only*/
   box-shadow: -6px 0px 10px 1px #646464;
 
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
+  /* Use translateZ(0) to prepare GPU for animation */
+  -webkit-transform: -webkit-translateZ(0);
+     -moz-transform: -moz-translateZ(0);
+      -ms-transform: -ms-translateZ(0);
+       -o-transform: -o-translateZ(0);
+          transform: translateZ(0);
 
-#main-content.closed {
-  left: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0,1,.41,1);
+     -moz-transition: all 0.6s cubic-bezier(0,1,.41,1);
+      -ms-transition: all 0.6s cubic-bezier(0,1,.41,1);
+       -o-transition: all 0.6s cubic-bezier(0,1,.41,1);
+          transition: all 0.6s cubic-bezier(0,1,.41,1);
 }
 
 #main-content.open {
-  left: 150px
+  -webkit-transform: -webkit-translateX(150px);
+     -moz-transform: -moz-translateX(150px);
+      -ms-transform: -ms-translateX(150px);
+       -o-transform: -o-translateX(150px);
+          transform: translateX(150px);
 }
 
 #menu-slider-hamburger {
   height: 15px;
   width: 20px;
+}
+
+#menu-slider-hamburger:hover {
+  cursor: pointer;
 }
 ```
 ###Javascript
